@@ -18,22 +18,23 @@
         >
         </div>
         <ul class="navbar-nav justify-content-end">
-          <li class="nav-item d-flex align-items-center">
+          <li class="nav-item d-flex align-items-center" v-if="!loggedIn">
             <router-link
                 :to="{ name: 'Sign In' }"
-                class="px-0 nav-link font-weight-bold"
+                class="px-0 nav-link font-weight-bold mx-2"
                 :class="textWhite ? textWhite : 'text-body'"
             >
               <i
-                  class="fa fa-user"
+                  class="fa fa-sign-in"
                   :class="this.$store.state.isRTL ? 'ms-sm-2' : 'me-sm-1'"
               ></i>
               <span class="d-sm-inline d-none">Sign In </span>
             </router-link>
           </li>
-          <li class="nav-item d-flex align-items-center">
+          <li class="nav-item d-flex align-items-center" v-if="!loggedIn">
             <router-link
-                :to="{ name: 'Sign In' }"
+                v-if="!loggedIn"
+                :to="{ name: 'Sign Up' }"
                 class="px-0 nav-link font-weight-bold"
                 :class="textWhite ? textWhite : 'text-body'"
             >
@@ -41,7 +42,7 @@
                   class="fa fa-user"
                   :class="this.$store.state.isRTL ? 'ms-sm-2' : 'me-sm-1'"
               ></i>
-              <span class="d-sm-inline d-none">Sign Out </span>
+              <span class="d-sm-inline d-none">Sign Up </span>
             </router-link>
           </li>
           <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
@@ -58,7 +59,9 @@
               </div>
             </a>
           </li>
-          <li class="px-3 nav-item d-flex align-items-center">
+          <li
+              v-if="loggedIn"
+              class="px-3 nav-item d-flex align-items-center">
             <a
                 class="p-0 nav-link"
                 href="/profile"
@@ -66,6 +69,20 @@
             >
               Account <i class="cursor-pointer fa fa-cog fixed-plugin-button-nav"></i>
             </a>
+          </li>
+          <li class="nav-item d-flex align-items-center">
+            <div
+                v-if="loggedIn"
+                @click="signout"
+                class="px-0 nav-link font-weight-bold ml-2"
+                :class="textWhite ? textWhite : 'text-body'"
+            >
+              <i
+                  class="fa fa-sign-out"
+                  :class="this.$store.state.isRTL ? 'ms-sm-2' : 'me-sm-1'"
+              ></i>
+              <span class="d-sm-inline d-none">Sign Out </span>
+            </div>
           </li>
         </ul>
       </div>
@@ -81,11 +98,17 @@ export default {
   data() {
     return {
       showMenu: false,
+      user: this.$store.state.user,
+      loggedIn: this.$store.state.user?.isLoggedin,
     };
   },
   props: ["minNav", "textWhite"],
   created() {
     this.minNav;
+  },
+  mounted() {
+    this.user = this.$store.state.user
+    this.loggedIn = this.$store.state.user?.isLoggedin
   },
   methods: {
     ...mapMutations(["navbarMinimize", "toggleConfigurator"]),
@@ -94,6 +117,11 @@ export default {
     toggleSidebar() {
       this.toggleSidebarColor("bg-white");
       this.navbarMinimize();
+    },
+    signout() {
+      localStorage.removeItem('user')
+      this.user.profile.isLoggedin = false
+      this.$store.dispatch('logout')
     },
   },
   components: {

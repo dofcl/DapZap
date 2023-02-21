@@ -12,6 +12,9 @@ const routes = [
         path: "/",
         name: "/",
         component: LandingPage,
+        meta: {
+            public: true,
+        },
     },
     {
         path: "/dashboard",
@@ -22,6 +25,10 @@ const routes = [
         path: "/flow-integrations",
         name: "Flow Integrations",
         component: Tables,
+        meta: {
+            public: true,
+        },
+
     },
     {
         path: "/profile",
@@ -32,16 +39,25 @@ const routes = [
         path: "/rtl-page",
         name: "Rtl",
         component: Rtl,
+        meta: {
+            public: true,
+        },
     },
     {
         path: "/sign-in",
         name: "Sign In",
         component: SignIn,
+        meta: {
+            public: true,
+        },
     },
     {
         path: "/sign-up",
         name: "Sign Up",
         component: SignUp,
+        meta: {
+            public: true,
+        },
     },
 ];
 
@@ -50,5 +66,19 @@ const router = createRouter({
     routes,
     linkActiveClass: "active",
 });
+
+router.beforeEach((to, from, next) => {
+    const user = JSON.parse(localStorage.getItem('user'))
+    if (to.matched.some(record => record.meta.public)) {
+        next()
+    } else if (!user) {
+        router.push('/sign-in')
+    } else {
+        if (to.name === 'logout') {
+            router.go('/')
+        }
+        next()
+    }
+})
 
 export default router;
