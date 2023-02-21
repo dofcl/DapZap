@@ -1,5 +1,11 @@
 import { createStore } from "vuex";
 import bootstrap from "bootstrap/dist/js/bootstrap.min.js";
+import firebase from 'firebase/app'
+import 'firebase/auth'
+import 'firebase/storage'
+import 'firebase/functions'
+import dbFunctions from '@/db'
+import router from '@/router'
 
 export default createStore({
   state: {

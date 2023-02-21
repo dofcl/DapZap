@@ -14,14 +14,14 @@ c) An attempt to create a standardised interoperability scheme around actions,ac
 ## Problems DapZap solves
 
 
-
+# FrontEnd
 # Install
 
 Main requirements
 
 - Node 16
 - Vue3
-- Vueitify 3
+- Vuetify 3
 
 `npm install`
 
@@ -31,3 +31,7 @@ Main requirements
 
 
 Theme using Vuetify 3 & Soft UI  from https://www.creative-tim.com/product/vue-soft-ui-dashboard
+
+
+
+# BackendEnd

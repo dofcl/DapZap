@@ -96,6 +96,12 @@ import Navbar from "@/examples/PageLayout/Navbar.vue";
 import SoftInput from "@/components/SoftInput.vue";
 import SoftCheckbox from "@/components/SoftCheckbox.vue";
 import SoftButton from "@/components/SoftButton.vue";
+import {
+  mdiAccountRemoveOutline,
+  mdiAccountCheck,
+} from '@mdi/js';
+import firebase from 'firebase/app'
+import 'firebase/auth'
 
 import {mapMutations} from "vuex";
 
@@ -107,6 +113,12 @@ export default {
     SoftCheckbox,
     SoftButton,
   },
+  data() {
+    return {
+
+      registerLoading: false
+    }
+  },
   created() {
     this.toggleEveryDisplay();
     this.toggleHideConfig();
@@ -115,8 +127,66 @@ export default {
     this.toggleEveryDisplay();
     this.toggleHideConfig();
   },
+
   methods: {
     ...mapMutations(["toggleEveryDisplay", "toggleHideConfig"]),
+    Register() {
+      this.registerLoading = true
+      firebase.auth()
+          .createUserWithEmailAndPassword(this.user.email, this.user.password)
+          .then(response => {
+            response.user.updateProfile({
+              displayName: this.user.displayName,
+            })
+                .then(() => {
+                  this.showSnack = true
+                  this.snackbarType = 'success'
+                  this.snackbarIcon = mdiAccountCheck
+                  this.snackbarText = 'Account successfully created!'
+
+                  // clear password
+                  this.user.password = ''
+                  this.user.isLoggedin = true
+                  this.$store
+                      .dispatch('signup', this.user)
+                      .then(() => {
+                        this.$store
+                            .dispatch('login', this.user)
+                            .then(() => {
+                              this.snackbarShow = true
+                              this.snackbarType = 'success'
+                              this.snackbarText = 'Login Successful'
+                              this.snackbarIcon = mdiAccountCheck
+                              this.$router.push('/dashboard')
+                            })
+                            .catch(err => {
+                              console.log(err)
+                              this.registerLoading = false
+                              this.snackbarShow = true
+                              this.snackbarIcon = mdiAccountRemoveOutline
+                              this.snackbarType = 'error'
+                              this.snackbarText = err.message
+                            })
+                      })
+                      .catch(err => {
+                        console.log(err)
+                        this.registerLoading = false
+                        this.snackbarShow = true
+                        this.snackbarType = 'error'
+                        this.snackbarIcon = mdiAccountRemoveOutline
+                        this.snackbarText = err.message
+                      })
+                })
+          })
+          .catch(err => {
+            console.log(err)
+            this.registerLoading = false
+            this.snackbarShow = true
+            this.snackbarType = 'error'
+            this.snackbarIcon = mdiAccountRemoveOutline
+            this.snackbarText = err.message
+          })
+    },
   },
 };
 </script>
