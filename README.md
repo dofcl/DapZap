@@ -1,3 +1,4 @@
+
 # DapZap
 
 A DapZap is suit of tools to:
@@ -25,7 +26,3 @@ Main requirements
 
 
 Theme using Vuetify 3 & Soft UI  from https://www.creative-tim.com/product/vue-soft-ui-dashboard
-
-```
-# DapZap
-# DapZap

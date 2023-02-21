@@ -1,5 +1,6 @@
 import {createRouter, createWebHistory} from "vue-router";
 import Dashboard from "@/views/Dashboard.vue";
+import LandingPage from "@/views/LandingPage.vue";
 import Tables from "@/views/Tables.vue";
 import Profile from "@/views/Profile.vue";
 import Rtl from "@/views/Rtl.vue";
@@ -10,7 +11,7 @@ const routes = [
     {
         path: "/",
         name: "/",
-        redirect: "/dashboard",
+        component: LandingPage,
     },
     {
         path: "/dashboard",
@@ -18,8 +19,8 @@ const routes = [
         component: Dashboard,
     },
     {
-        path: "/tables",
-        name: "Tables",
+        path: "/flow-integrations",
+        name: "Flow Integrations",
         component: Tables,
     },
     {

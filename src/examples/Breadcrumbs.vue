@@ -1,6 +1,6 @@
 <template>
   <nav aria-label="breadcrumb">
-    <h4 class="mb-0 mt-2 font-weight-bolder" :class="textWhite ? 'text-white' : ''">
+    <h4 v-if="currentPage && currentPage !== '/'" class="mb-0 mt-2 font-weight-bolder" :class="textWhite ? 'text-white' : ''">
       {{ currentPage }}
     </h4>
   </nav>
