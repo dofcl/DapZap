@@ -23,6 +23,11 @@ Main requirements
 - Vue3
 - Vueitify 3
 
+`npm install`
+
+### local
+
+`npm run dev`
 
 
 Theme using Vuetify 3 & Soft UI  from https://www.creative-tim.com/product/vue-soft-ui-dashboard

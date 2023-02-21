@@ -28,6 +28,20 @@
         label="View API Docs"
         icon="ni ni-single-copy-04"
     />
+    <div class="card mx-auto text-center mt-3">
+      <div class="card-body p-2">
+        <h6>Already using CloudFlare?</h6>
+        <h6 class="font-weight-bolder">Get started in minutes.</h6>
+        <a href="https://cloudflare.com/apps/[ appId ]/install?source=button">
+          <img
+              src="https://install.cloudflareapps.com/install-button.png"
+              alt="Install [ appTitle ] with Cloudflare"
+              border="0"
+              width="150">
+        </a>
+      </div>
+    </div>
+
     <a
         class="btn bg-gradient-success mt-4 w-100"
         href="/contact-us"

@@ -11,7 +11,7 @@
           v-bind="$attrs"
           :class="isBlur ? 'text-dark' : 'text-white'"
       >
-        DapZap
+        <img :src="logo" class="navbar-brand-img" alt="DapZap logo" style="max-width: 200px"/>
       </router-link>
       <button
           class="navbar-toggler shadow-none ms-2"
@@ -50,6 +50,7 @@
 <script>
 import downArrWhite from "@/assets/img/down-arrow-white.svg";
 import downArrBlack from "@/assets/img/down-arrow-dark.svg";
+import logo from "@/assets/img/logo-ct.png";
 
 export default {
   name: "navbar",
@@ -57,6 +58,7 @@ export default {
     return {
       downArrWhite,
       downArrBlack,
+      logo
     };
   },
   props: {

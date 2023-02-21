@@ -10,7 +10,7 @@
           >
             <li class="nav-item">
               ©
-              {{ new Date().getFullYear() }} DapZap. Built during Flow Hackathon
+              {{ new Date().getFullYear() }} DapZap.
             </li>
           </ul>
         </div>
