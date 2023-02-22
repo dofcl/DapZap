@@ -1,10 +1,13 @@
 import Vue from 'vue'
 import App from './App.vue'
+import router from './router'
+import store from './store/index'
 import vuetify from './plugins/vuetify'
 
 Vue.config.productionTip = false
-
-new Vue({
-  vuetify,
-  render: h => h(App)
-}).$mount('#app')
+import vueCustomElement from 'vue-custom-element'
+Vue.use(vueCustomElement)
+App.store = store
+App.router = router
+App.vuetify = vuetify
+Vue.customElement('vue-widget', App)
