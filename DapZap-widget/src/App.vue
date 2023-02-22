@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view :key='$route.params'/>
+    <router-view/>
   </div>
 </template>
 
@@ -14,3 +14,34 @@ export default {
   }
 }
 </script>
+<style>
+.text-center {
+  text-align: center;
+}
+
+.pa-2 {
+  padding: 2px;
+}
+
+.pa-4 {
+  padding: 4px;
+}
+
+
+.ma-2 {
+  margin: 2px;
+}
+
+.ma-4 {
+  margin: 4px;
+}
+
+.pt-8 {
+  padding-top: 8px;
+}
+
+.dapzap-login-btn {
+  float: right;
+  margin: 10px;
+}
+</style>
