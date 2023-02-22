@@ -1,17 +1,18 @@
 <template>
   <div id="app">
-    <router-view/>
+    <v-app>
+      <v-content class="ma-6">
+        <router-view/>
+      </v-content>
+    </v-app>
   </div>
 </template>
 
 
 <script>
-// Remove the Hello World import here
 export default {
   name: 'App',
-  components: {
-    // And remove the Hello World component here
-  }
+  components: {}
 }
 </script>
 <style>
