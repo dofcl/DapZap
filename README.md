@@ -35,3 +35,17 @@ Theme using Vuetify 3 & Soft UI  from https://www.creative-tim.com/product/vue-s
 
 
 # BackendEnd
+
+
+# CloudFlare Plugin
+## Docs
+https://www.cloudflare.com/apps/developers
+
+Clone sample app
+
+`yarn install`
+`yarn upgrade`
+`yarn start`
+
+`yarn build`
+
