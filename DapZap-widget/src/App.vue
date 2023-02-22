@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <v-app>
-      <v-content class="ma-6">
+      <v-main class="ma-6">
         <router-view/>
-      </v-content>
+      </v-main>
     </v-app>
   </div>
 </template>
