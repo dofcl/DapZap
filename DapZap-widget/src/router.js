@@ -1,10 +1,17 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Login from './views/LoginView.vue'
+import Home from './views/HomeView.vue'
 
 Vue.use(Router)
 export default new Router({
+    mode: 'history',
     routes: [
+        {
+            path: '/',
+            name: 'home',
+            component: Home
+        },
         {
             path: '/login',
             name: 'login',
@@ -12,9 +19,8 @@ export default new Router({
         },
         {
             path: '/*',
-            redirect: {name: 'login'}
+            redirect: {name: 'home'}
         }
     ],
-    mode: 'abstract',
     linkActiveClass: 'active'
 })

@@ -7,7 +7,7 @@ import vuetify from './plugins/vuetify'
 Vue.config.productionTip = false
 import vueCustomElement from 'vue-custom-element'
 Vue.use(vueCustomElement)
+App.vuetify = vuetify
 App.store = store
 App.router = router
-App.vuetify = vuetify
 Vue.customElement('vue-widget', App)

@@ -1,11 +1,9 @@
-
 # DapZap
 
 A DapZap is suit of tools to:
 
 a) Bridge web2 <-> web3:
- Simple APIs and Drop-In widgets to connect exisiting web2 project to the flow/dapper ecoystem
-
+Simple APIs and Drop-In widgets to connect exisiting web2 project to the flow/dapper ecoystem
 
 b) Make is really easy to integrate web3 projects with each other
 
@@ -13,8 +11,8 @@ c) An attempt to create a standardised interoperability scheme around actions,ac
 
 ## Problems DapZap solves
 
-
 # FrontEnd
+
 # Install
 
 Main requirements
@@ -29,23 +27,25 @@ Main requirements
 
 `npm run dev`
 
-
-Theme using Vuetify 3 & Soft UI  from https://www.creative-tim.com/product/vue-soft-ui-dashboard
-
-
+Theme using Vuetify 3 & Soft UI from https://www.creative-tim.com/product/vue-soft-ui-dashboard
 
 # BackendEnd
 
+## DapZap Widget
 
-# CloudFlare Plugin
-## Docs
-https://www.cloudflare.com/apps/developers
+JS embedd into any website for no code functions
+Boiler plate
+from: https://itnext.io/vuidget-how-to-create-an-embeddable-vue-js-widget-with-vue-custom-element-674bdcb96b97
 
-Clone sample app
+## hosting
 
-`yarn install`
-`yarn upgrade`
-`yarn start`
+Hosted using Cloudlare push using wrangler
+`wrangler login`
 
-`yarn build`
+### Deploy
 
+`npm build`
+
+### Deploy
+
+`npx wrangler pages publish dist`

@@ -2,7 +2,7 @@
   <div>
     <!-- access root props via $root -->
     <br>
-    Login
+    Home
   </div>
 </template>
 
