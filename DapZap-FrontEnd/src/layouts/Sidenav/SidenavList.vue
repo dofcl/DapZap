@@ -12,6 +12,20 @@
         </sidenav-collapse>
       </li>
       <li class="nav-item">
+        <sidenav-collapse navText="Workflow Builder" :to="{ name: 'Workflow Builder' }">
+          <template #icon>
+            <settings/>
+          </template>
+        </sidenav-collapse>
+      </li>
+      <li class="nav-item">
+        <sidenav-collapse navText="UI Widgets and No Code" :to="{ name: 'UI Widgets' }">
+          <template #icon>
+            <box3d/>
+          </template>
+        </sidenav-collapse>
+      </li>
+      <li class="nav-item">
         <sidenav-collapse navText="Flow Integrations" :to="{ name: 'Flow Integrations' }">
           <template #icon>
             <office/>
@@ -55,6 +69,8 @@ import SidenavCollapse from "./SidenavCollapse.vue";
 import SidenavCard from "./SidenavCard.vue";
 import Shop from "../../components/Icon/Shop.vue";
 import Office from "../../components/Icon/Office.vue";
+import Settings from "../../components/Icon/Settings.vue";
+import Box3d from "../../components/Icon/Box3d.vue";
 
 export default {
   name: "SidenavList",
@@ -72,7 +88,9 @@ export default {
     SidenavCollapse,
     SidenavCard,
     Shop,
+    Settings,
     Office,
+    Box3d
   },
   methods: {
     getRoute() {

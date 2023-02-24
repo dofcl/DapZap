@@ -1,30 +1,10 @@
 <template>
-  <div class="container-fluid">
-    <div
-        class="mt-4 page-header min-height-300 border-radius-xl"
-        :style="{
-        backgroundImage:
-          'url(' + require('@/assets/img/curved-images/curved14.jpg') + ')',
-        backgroundPositionY: '50%',
-      }"
-    >
-      <span class="mask bg-gradient-success opacity-6"></span>
-    </div>
-    <div class="mx-4 overflow-hidden card card-body blur shadow-blur mt-n6">
+  <div class="py-4 container-fluid">
+    <div class="mx-2 overflow-hidden card card-body blur shadow-blur mt-4">
       <div class="row gx-4">
-        <div class="col-auto">
-          <div class="avatar avatar-xl position-relative">
-            <img
-                src="@/assets/img/bruce-mars.jpg"
-                alt="profile_image"
-                class="shadow-sm w-100 border-radius-lg"
-            />
-          </div>
-        </div>
         <div class="col-auto my-auto">
           <div class="h-100">
-            <h5 class="mb-1">Alec Thompson</h5>
-            <p class="mb-0 text-sm font-weight-bold">CEO / Co-Founder</p>
+            <h5 class="mb-1">{{ user.displayName }}</h5>
           </div>
         </div>
         <div
@@ -196,127 +176,94 @@
   </div>
   <div class="py-4 container-fluid">
     <div class="mt-3 row">
-      <div class="col-12 col-md-6 col-xl-4">
+      <div class="col-12 col-md-12 col-xl-12">
         <div class="card h-100">
           <div class="p-3 pb-0 card-header">
             <h6 class="mb-0">Platform Settings</h6>
           </div>
-          <div class="p-3 card-body">
-            <h6 class="text-xs text-uppercase text-body font-weight-bolder">
-              Account
-            </h6>
-            <ul class="list-group">
-              <li class="px-0 border-0 list-group-item">
-                <soft-switch
-                    id="flexSwitchCheckDefault"
-                    name="email"
-                    class="ps-0 ms-auto"
-                    label-class="mb-0 text-body ms-3 text-truncate w-80"
-                    checked
-                >Email me when someone follows me
-                </soft-switch
-                >
-              </li>
-              <li class="px-0 border-0 list-group-item">
-                <soft-switch
-                    id="flexSwitchCheckDefault1"
-                    name="Email"
-                    label-class="mb-0 text-body ms-3 text-truncate w-80"
-                    class="ps-0 ms-auto"
-                >Email me when someone answers on my post
-                </soft-switch
-                >
-              </li>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="p-3 card-body">
+                <h6 class="text-xs text-uppercase text-body font-weight-bolder">
+                  Account
+                </h6>
+                <ul class="list-group">
+                  <li class="px-2 border-0 list-group-item">
+                    <soft-switch
+                        id="flexSwitchCheckDefault"
+                        name="email"
+                        class="ps-0 ms-auto"
+                        label-class="mb-0 text-body ms-3 text-truncate w-80"
+                        checked
+                    >Email me when someone follows me
+                    </soft-switch
+                    >
+                  </li>
+                  <li class="px-2 border-0 list-group-item">
+                    <soft-switch
+                        id="flexSwitchCheckDefault1"
+                        name="Email"
+                        label-class="mb-0 text-body ms-3 text-truncate w-80"
+                        class="ps-0 ms-auto"
+                    >Email me when someone answers on my post
+                    </soft-switch
+                    >
+                  </li>
 
-              <li class="px-0 border-0 list-group-item">
-                <soft-switch
-                    id="flexSwitchCheckDefault2"
-                    name="Email"
-                    label-class="mb-0 text-body ms-3 text-truncate w-80"
-                    class="ps-0 ms-auto"
-                    checked
-                >Email me when someone mentions me
-                </soft-switch
-                >
-              </li>
-            </ul>
-            <h6
-                class="mt-4 text-xs text-uppercase text-body font-weight-bolder"
-            >
-              Application
-            </h6>
-            <ul class="list-group">
-              <li class="px-0 border-0 list-group-item">
-                <soft-switch
-                    id="flexSwitchCheckDefault3"
-                    name="Project Launch"
-                    class="ps-0 ms-auto"
-                    label-class="mb-0 text-body ms-3 text-truncate w-80"
-                >New launches and projects
-                </soft-switch
-                >
-              </li>
-              <li class="px-0 border-0 list-group-item">
-                <soft-switch
-                    id="flexSwitchCheckDefault4"
-                    name="Product Update"
-                    class="ps-0 ms-auto"
-                    label-class="mb-0 text-body ms-3 text-truncate w-80"
-                    checked
-                >Monthly product updates
-                </soft-switch
-                >
-              </li>
-              <li class="px-0 pb-0 border-0 list-group-item">
-                <soft-switch
-                    id="flexSwitchCheckDefault5"
-                    name="Newsletter"
-                    class="ps-0 ms-auto"
-                    label-class="mb-0 text-body ms-3 text-truncate w-80"
-                >Subscribe to newsletter
-                </soft-switch
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="mt-4 col-12 col-md-6 col-xl-4 mt-md-0">
-        <profile-info-card
-            title="Profile Information"
-            description="Hi, I’m Alec Thompson, Decisions: If you can’t decide, the answer is no. If two equally difficult paths, choose the one more painful in the short term (pain avoidance is creating an illusion of equality)."
-            :info="{
-            fullName: 'Alec M. Thompson',
-            mobile: '(44) 123 1234 123',
-            email: 'alecthompson@mail.com',
-            location: 'USA',
-          }"
-            :social="[
-            {
-              link: 'https://www.facebook.com/CreativeTim/',
-              icon: faFacebook,
-            },
-            {
-              link: 'https://twitter.com/creativetim',
-              icon: faTwitter,
-            },
-            {
-              link: 'https://www.instagram.com/creativetimofficial/',
-              icon: faInstagram,
-            },
-          ]"
-            :action="{
-            route: 'javascript:;',
-            tooltip: 'Edit Profile',
-          }"
-        />
-      </div>
-      <div class="mt-4 col-12 col-xl-4 mt-xl-0">
-        <div class="card h-100">
-          <div class="p-3 pb-0 card-header">
-            <h6 class="mb-0">Extra</h6>
-          </div>
-          <div class="p-3 card-body">
+                  <li class="px-2 border-0 list-group-item">
+                    <soft-switch
+                        id="flexSwitchCheckDefault2"
+                        name="Email"
+                        label-class="mb-0 text-body ms-3 text-truncate w-80"
+                        class="ps-0 ms-auto"
+                        checked
+                    >Email me when someone mentions me
+                    </soft-switch
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h6
+                  class="mt-4 text-xs text-uppercase text-body font-weight-bolder"
+              >
+                Application
+              </h6>
+              <ul class="list-group">
+                <li class="px-2 border-0 list-group-item">
+                  <soft-switch
+                      id="flexSwitchCheckDefault3"
+                      name="Project Launch"
+                      class="ps-0 ms-auto"
+                      label-class="mb-0 text-body ms-3 text-truncate w-80"
+                  >New launches and projects
+                  </soft-switch
+                  >
+                </li>
+                <li class="px-2 border-0 list-group-item">
+                  <soft-switch
+                      id="flexSwitchCheckDefault4"
+                      name="Product Update"
+                      class="ps-0 ms-auto"
+                      label-class="mb-0 text-body ms-3 text-truncate w-80"
+                      checked
+                  >Monthly product updates
+                  </soft-switch
+                  >
+                </li>
+                <li class="px-2 pb-0 border-0 list-group-item">
+                  <soft-switch
+                      id="flexSwitchCheckDefault5"
+                      name="Newsletter"
+                      class="ps-0 ms-auto"
+                      label-class="mb-0 text-body ms-3 text-truncate w-80"
+                  >Subscribe to newsletter
+                  </soft-switch
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -326,7 +273,6 @@
 
 <script>
 import SoftSwitch from "@/components/SoftSwitch.vue";
-import ProfileInfoCard from "./components/ProfileInfoCard.vue";
 import {
   faFacebook,
   faTwitter,
@@ -339,11 +285,11 @@ export default {
   name: "ProfileOverview",
   components: {
     SoftSwitch,
-    ProfileInfoCard,
   },
   data() {
     return {
       showMenu: false,
+      user: this.$store.state.user,
       faFacebook,
       faTwitter,
       faInstagram,

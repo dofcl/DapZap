@@ -5,7 +5,7 @@
       id="navbarBlur"
       data-scroll="true"
   >
-    <div class="px-3 py-1 container-fluid">
+    <div class="px-0 pt-0 mt-0 container-fluid">
       <breadcrumbs :currentPage="currentRouteName" :textWhite="textWhite"/>
       <div
           class="mt-2 collapse navbar-collapse mt-sm-0 me-md-0 me-sm-4"
@@ -62,27 +62,25 @@
           <li
               v-if="loggedIn"
               class="px-3 nav-item d-flex align-items-center">
-            <a
-                class="p-0 nav-link"
-                href="/profile"
-                :class="textWhite ? textWhite : 'text-body'"
-            >
-              Account <i class="cursor-pointer fa fa-cog fixed-plugin-button-nav"></i>
-            </a>
+            <button class="btn btn-white btn-sm">
+              <a
+                  class="p-0 nav-link"
+                  href="/profile"
+                  :class="textWhite ? textWhite : 'text-body'"
+              >
+                Account
+              </a>
+            </button>
           </li>
           <li class="nav-item d-flex align-items-center">
-            <div
+            <button
                 v-if="loggedIn"
                 @click="signout"
-                class="px-0 nav-link font-weight-bold ml-2"
+                class="nav-link ml-2 btn btn-white btn-sm"
                 :class="textWhite ? textWhite : 'text-body'"
             >
-              <i
-                  class="fa fa-sign-out"
-                  :class="this.$store.state.isRTL ? 'ms-sm-2' : 'me-sm-1'"
-              ></i>
               <span class="d-sm-inline d-none">Sign Out </span>
-            </div>
+            </button>
           </li>
         </ul>
       </div>

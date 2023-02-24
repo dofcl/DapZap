@@ -106,7 +106,7 @@
 </template>
 
 <script>
-import Navbar from "@/examples/PageLayout/Navbar.vue";
+import Navbar from "@/layouts/PageLayout/Navbar.vue";
 import SoftCheckbox from "@/components/SoftCheckbox.vue";
 import SoftButton from "@/components/SoftButton.vue";
 import {

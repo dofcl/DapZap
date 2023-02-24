@@ -23,9 +23,9 @@
   </main>
 </template>
 <script>
-import Sidenav from "./examples/Sidenav";
-import Navbar from "@/examples/Navbars/Navbar.vue";
-import AppFooter from "@/examples/Footer.vue";
+import Sidenav from "./layouts/Sidenav";
+import Navbar from "@/layouts/Navbars/Navbar.vue";
+import AppFooter from "@/layouts/Footer.vue";
 import {mapMutations} from "vuex";
 
 export default {
@@ -61,3 +61,36 @@ export default {
   },
 };
 </script>
+<style>
+body {
+  background-attachment: fixed !important;
+  background-repeat: no-repeat;
+  background-position: center !important;
+}
+
+aside#sidenav-main {
+  border-right: 1px solid #d1ebde !important;
+  border-radius: 0;
+  background-color: #c6efba6b !important;
+  margin-top: -11px !important;
+  height: 110% !important;
+}
+
+.card {
+  border-radius: 5px !important;
+  box-shadow: 0 0 0 3px #2fae0933 !important;
+  background-color: #ebf1e1b8 !important;
+}
+
+.card-header:first-child {
+  border-radius: 5px !important;
+}
+
+.navbar-vertical .navbar-brand > img, .navbar-vertical .navbar-brand-img {
+  max-height: none !important;
+}
+
+div#sidenavCard.card {
+  border-radius: 20px !important;
+}
+</style>

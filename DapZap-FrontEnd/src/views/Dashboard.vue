@@ -1,5 +1,5 @@
 <template>
-  <div class="py-4 container-fluid">
+  <div class="py-3 container-fluid">
     <div class="row">
       <div class="col-lg-7 mb-lg-0 mb-4">
         <div class="card">
@@ -7,11 +7,11 @@
             <div class="row">
               <div class="col-lg-6">
                 <div class="d-flex flex-column h-100">
-                  <p class="mb-1 pt-2 text-bold">Example Panel</p>
-                  <h5 class="font-weight-bolder">Soft UI Dashboard</h5>
+                  <p class="mb-1 pt-2 text-bold">DapZap is the Zapier for Web3</p>
+                  <h5 class="font-weight-bolder">No Code, Low Code, and REST APIs to get to market fast.</h5>
                   <p class="mb-5">
-                    From colors, cards, typography to complex elements, you will
-                    find the full documentation.
+                    Add Prebuilt walletless and Flow/Dapper login Ui, PFP pickers and custom marketplace listings.
+                    Level up your Web2 or Web3 projects in minutes.
                   </p>
                   <a
                       class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto"
@@ -59,15 +59,14 @@
             <div class="card-body position-relative z-index-1 p-3 h-100">
               <div class="d-flex flex-column h-100">
                 <h5 class="text-white font-weight-bolder mb-4 pt-2">
-                  Work with the rockets
+                  Works with any NFT or FT on Flow
                 </h5>
                 <p class="text-white mb-5">
-                  Wealth creation is an evolutionarily recent positive-sum game.
-                  It is all about who take the opportunity first.
+                  Easily automate tasks, and create custom workflows for collectors and customers.
                 </p>
                 <a
                     class="text-white font-weight-bold ps-1 mb-0 icon-move-left mt-auto"
-                    href="javascript:;"
+                    href="/workflows"
                 >
                   Read more
                   <i
@@ -81,141 +80,37 @@
         </div>
       </div>
     </div>
-    <div class="mt-4 row">
-      <div class="mb-4 col-lg-5 mb-lg-0">
-        <div class="card z-index-2">
-          <div class="p-3 card-body">
-            <reports-bar-chart
-                id="chart-bar"
-                title="active Users"
-                description="(<strong>+23%</strong>) than last week"
-                :chart="{
-                labels: [
-                  'Apr',
-                  'May',
-                  'Jun',
-                  'Jul',
-                  'Aug',
-                  'Sep',
-                  'Oct',
-                  'Nov',
-                  'Dec',
-                ],
-                datasets: {
-                  label: 'Sales',
-                  data: [450, 200, 100, 220, 500, 100, 400, 230, 500],
-                },
-              }"
-                :items="[
-                {
-                  icon: {
-                    color: 'primary',
-                    component: faUsers,
-                  },
-                  label: 'users',
-                  progress: { content: '37K', percentage: 60 },
-                },
-                {
-                  icon: { color: 'info', component: faHandPointer },
-                  label: 'clicks',
-                  progress: { content: '2m', percentage: 90 },
-                },
-                {
-                  icon: { color: 'warning', component: faCreditCard },
-                  label: 'Sales',
-                  progress: { content: '435$', percentage: 30 },
-                },
-                {
-                  icon: { color: 'danger', component: faScrewdriverWrench },
-                  label: 'Items',
-                  progress: { content: '43', percentage: 50 },
-                },
-              ]"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-7">
-        <!-- line chart -->
-        <div class="card z-index-2">
-          <gradient-line-chart
-              id="chart-line"
-              title="Gradient Line Chart"
-              description="<i class='fa fa-arrow-up text-success'></i>
-      <span class='font-weight-bold'>4% more</span> in 2021"
-              :chart="{
-              labels: [
-                'Apr',
-                'May',
-                'Jun',
-                'Jul',
-                'Aug',
-                'Sep',
-                'Oct',
-                'Nov',
-                'Dec',
-              ],
-              datasets: [
-                {
-                  label: 'Mobile Apps',
-                  data: [50, 40, 300, 220, 500, 250, 400, 230, 500],
-                },
-                {
-                  label: 'Websites',
-                  data: [30, 90, 40, 140, 290, 290, 340, 230, 400],
-                },
-              ],
-            }"
-          />
-        </div>
-      </div>
-    </div>
     <div class="row my-4">
       <div class="col-lg-8 col-md-6 mb-md-0 mb-4">
-        <projects-card/>
+        <projects-table/>
       </div>
       <div class="col-lg-4 col-md-6">
         <timeline-list
             class="h-100"
-            title="Orders overview"
-            description="<i class='fa fa-arrow-up text-success' aria-hidden='true'></i>
-        <span class='font-weight-bold'>24%</span> this month"
-        >
+            title="Recently Processed DapZaps">
           <timeline-item
               color="success"
               icon="bell-55"
-              title="$2400 Design changes"
-              date-time="22 DEC 7:20 PM"
-          />
-          <TimelineItem
-              color="danger"
-              icon="html5"
-              title="New order #1832412"
-              date-time="21 DEC 11 PM"
+              title="Test Slack"
+              date-time="24 FEB 7:20 PM"
           />
           <TimelineItem
               color="info"
               icon="cart"
-              title="Server payments for April"
-              date-time="21 DEC 9:34 PM"
+              title="NFT Purchased"
+              date-time="24 FEB 9:34 PM"
           />
           <TimelineItem
               color="warning"
               icon="credit-card"
-              title="New card added for order #4395133"
-              date-time="20 DEC 2:20 AM"
-          />
-          <TimelineItem
-              color="primary"
-              icon="key-25"
-              title="Unlock packages for development"
-              date-time="18 DEC 4:54 AM"
+              title="Flow Purcahsed"
+              date-time="25 FEB 2:20 AM"
           />
           <TimelineItem
               color="info"
               icon="check-bold"
-              title="Notifications unread"
-              date-time="15 DEC"
+              title="First DapZap Created"
+              date-time="24 FEB 3:20 PM"
           />
         </timeline-list>
       </div>
@@ -223,11 +118,9 @@
   </div>
 </template>
 <script>
-import ReportsBarChart from "@/examples/Charts/ReportsBarChart.vue";
-import GradientLineChart from "@/examples/Charts/GradientLineChart.vue";
 import TimelineList from "./components/TimelineList.vue";
 import TimelineItem from "./components/TimelineItem.vue";
-import ProjectsCard from "./components/ProjectsCard.vue";
+import ProjectsTable from "./components/ProjectsTable.vue";
 import {
   faHandPointer,
   faUsers,
@@ -247,9 +140,7 @@ export default {
     };
   },
   components: {
-    ReportsBarChart,
-    GradientLineChart,
-    ProjectsCard,
+    ProjectsTable,
     TimelineList,
     TimelineItem,
   },

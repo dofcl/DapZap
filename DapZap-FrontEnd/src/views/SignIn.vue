@@ -79,7 +79,7 @@
 </template>
 
 <script>
-import Navbar from "@/examples/PageLayout/Navbar.vue";
+import Navbar from "@/layouts/PageLayout/Navbar.vue";
 import SoftSwitch from "@/components/SoftSwitch.vue";
 import SoftButton from "@/components/SoftButton.vue";
 import firebase from 'firebase/app'

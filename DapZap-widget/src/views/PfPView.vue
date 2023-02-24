@@ -22,15 +22,15 @@ pub fun main(address:Address) : [Flovatar.FlovatarData] {
 }`
 // eslint-disable-next-line no-unused-vars
 const UFCstrike = `
- import NonFungibleToken from 0x1d7e57aa55817448
-import UFC_NFT from 0x329feb3ab062d289
+  import NonFungibleToken from 0x1d7e57aa55817448
+  import UFC_NFT from 0x329feb3ab062d289
 
 
-pub fun main(address: Address): [UInt64] {
-    let account = getAccount(address)
+  pub fun main(address: Address): [UInt64] {
+      let account = getAccount(address)
 
-    let collectionRef = account.getCapability(UFC_NFT.CollectionPublicPath).borrow<&{NonFungibleToken.CollectionPublic}>()
-        ?? panic("Could not borrow capability from public collection")
+      let collectionRef = account.getCapability(UFC_NFT.CollectionPublicPath).borrow<&{NonFungibleToken.CollectionPublic}>()
+          ?? panic("Could not borrow capability from public collection")
 
     return collectionRef.getIDs()
     }`

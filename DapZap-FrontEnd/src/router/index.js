@@ -1,11 +1,13 @@
 import {createRouter, createWebHistory} from "vue-router";
 import Dashboard from "@/views/Dashboard.vue";
 import LandingPage from "@/views/LandingPage.vue";
-import Tables from "@/views/Tables.vue";
+import Integrations from "@/views/Integrations.vue";
 import Profile from "@/views/Profile.vue";
 import Rtl from "@/views/Rtl.vue";
 import SignIn from "@/views/SignIn.vue";
 import SignUp from "@/views/SignUp.vue";
+import WorkflowBuilder from "@/views/WorkflowBuilder.vue";
+import Widgets from "@/views/Widgets.vue";
 
 const routes = [
     {
@@ -24,7 +26,25 @@ const routes = [
     {
         path: "/flow-integrations",
         name: "Flow Integrations",
-        component: Tables,
+        component: Integrations,
+        meta: {
+            public: true,
+        },
+
+    },
+    {
+        path: "/workflow",
+        name: "Workflow Builder",
+        component: WorkflowBuilder,
+        meta: {
+            public: true,
+        },
+
+    },
+    {
+        path: "/ui-widgets",
+        name: "UI Widgets",
+        component: Widgets,
         meta: {
             public: true,
         },
