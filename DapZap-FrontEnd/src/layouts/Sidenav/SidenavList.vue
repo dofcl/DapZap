@@ -46,7 +46,7 @@
       <div class="card-body p-2">
         <h6>Already using CloudFlare?</h6>
         <h6 class="font-weight-bolder">Get started in minutes.</h6>
-        <a href="https://cloudflare.com/apps/[ appId ]/install?source=button">
+        <a href="https://cloudflare.com/apps/tgeq0WWDjObt/install?source=button">
           <img
               src="https://install.cloudflareapps.com/install-button.png"
               alt="Install [ appTitle ] with Cloudflare"

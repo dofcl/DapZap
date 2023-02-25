@@ -4,6 +4,47 @@
     <p>Here are examples of the no-code and low code widgets</p>
     <v-container fluid :style="{fontFamily:fontFamily} ">
       <v-row>
+        <v-col cols="12">
+          <v-divider></v-divider>
+          <h2>Widget Theme</h2><br>
+          <p>Choose the colors and fonts to match your website</p>
+          <v-row>
+            <v-col cols="4">
+              <h4>Primary Color</h4>
+              <v-color-picker
+                  v-model="backgroundColor"
+                  dot-size="25"
+                  swatches-max-height="200"
+              ></v-color-picker>
+            </v-col>
+            <v-col cols="4">
+              <h4>Secondary Color</h4>
+              <v-color-picker
+                  v-model="secondaryColor"
+                  dot-size="25"
+                  swatches-max-height="200"
+              ></v-color-picker>
+            </v-col>
+            <v-col cols="4">
+              <h4>Font</h4>
+              <font-picker :api-key="googleFontAPI" :options="options" :active-font="fontFamily"
+                           @change="changeFont"></font-picker>
+              <br>
+              <br>
+              <h4>Font Color</h4>
+              <v-color-picker
+                  v-model="fontColor"
+                  dot-size="25"
+                  :color="primary"
+                  swatches-max-height="200"
+              ></v-color-picker>
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
+    </v-container>
+    <v-container fluid :style="{fontFamily:fontFamily} ">
+      <v-row>
         <v-col cols="4" class="d-flex align-stretch">
           <v-card>
             <v-card-title>Flow/Dapper Authentication</v-card-title>
@@ -75,47 +116,6 @@
               <PfPView :fontColor="fontColor" :backgroundColor="backgroundColor"></PfPView>
             </v-card-actions>
           </v-card>
-        </v-col>
-      </v-row>
-    </v-container>
-    <v-container fluid :style="{fontFamily:fontFamily} ">
-      <v-row>
-        <v-col cols="12">
-          <v-divider></v-divider>
-          <h2>Widget Theme</h2><br>
-          <p>Choose the colors and fonts to match your website</p>
-          <v-row>
-            <v-col cols="4">
-              <h4>Primary Color</h4>
-              <v-color-picker
-                  v-model="backgroundColor"
-                  dot-size="25"
-                  swatches-max-height="200"
-              ></v-color-picker>
-            </v-col>
-            <v-col cols="4">
-              <h4>Secondary Color</h4>
-              <v-color-picker
-                  v-model="secondaryColor"
-                  dot-size="25"
-                  swatches-max-height="200"
-              ></v-color-picker>
-            </v-col>
-            <v-col cols="4">
-              <h4>Font</h4>
-              <font-picker :api-key="googleFontAPI" :options="options" :active-font="fontFamily"
-                           @change="changeFont"></font-picker>
-              <br>
-              <br>
-              <h4>Font Color</h4>
-              <v-color-picker
-                  v-model="fontColor"
-                  dot-size="25"
-                  :color="primary"
-                  swatches-max-height="200"
-              ></v-color-picker>
-            </v-col>
-          </v-row>
         </v-col>
       </v-row>
     </v-container>

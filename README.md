@@ -33,7 +33,7 @@ Theme using Vuetify 3 & Soft UI from https://www.creative-tim.com/product/vue-so
 
 ## DapZap Widget
 
-JS embedd into any website for no code functions
+JS embed into any website for no code functions
 Boiler plate
 from: https://itnext.io/vuidget-how-to-create-an-embeddable-vue-js-widget-with-vue-custom-element-674bdcb96b97
 
@@ -44,7 +44,7 @@ Hosted using Cloudlare push using wrangler
 
 ### Deploy
 
-`npm build`
+`npm run build`
 
 ### Deploy
 
