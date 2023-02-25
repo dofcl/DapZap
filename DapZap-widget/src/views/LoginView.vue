@@ -33,6 +33,19 @@
               <br>
             </div>
           </v-card-text>
+
+          <div class="text-center mx-auto mt-4 pt-5" v-if="walletless">
+            Or
+            <h3 class="text-center mx-auto pa-4 ma-4 d-block pt-8">Sign in as guest.</h3>
+            <v-card-text>
+              <div class="mt-1 mx-auto text-center d-block">
+                <v-btn @click="loginGuest" class="ma-2 pa-2">
+                  Guest
+                </v-btn>
+                <br>
+              </div>
+            </v-card-text>
+          </div>
         </v-card>
       </v-dialog>
     </div>
@@ -61,13 +74,16 @@ export default {
   props: {
     fontColor: {
       type: String,
-      default: 'black'
+      default: 'black',
+    },
+    walletless: {
+      type: Boolean,
+      default: false
     },
     backgroundColor: {
       type: String,
       default: '#eee'
     },
-
   },
   data() {
     return {
@@ -100,7 +116,11 @@ export default {
     logOut() {
       fcl.unauthenticate()
       this.address = ''
-    }
+    },
+    loginGuest() {
+      //todo connect to Notify API
+      this.startLogin = false
+    },
   },
 }
 </script>

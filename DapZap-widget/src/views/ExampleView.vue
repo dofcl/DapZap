@@ -23,7 +23,7 @@
         </v-col>
         <v-col cols="4" class="d-flex align-stretch">
           <v-card>
-            <v-card-title>Wallet Sign Up</v-card-title>
+            <v-card-title>Walletless Sign In</v-card-title>
             <v-card-text>
               <ul>
                 <li>Wallet-less Login/logout</li>
@@ -36,7 +36,7 @@
             <v-divider></v-divider>
             <v-card-actions class="float-right">
               Example:
-              <LoginView :fontColor="fontColor" :backgroundColor="backgroundColor"></LoginView>
+              <LoginView :fontColor="fontColor" :backgroundColor="backgroundColor" :walletless="true"></LoginView>
             </v-card-actions>
           </v-card>
         </v-col>
@@ -48,6 +48,25 @@
                 <li>Gravatar Replacement</li>
                 <li>Show all NFTS from user's collection</li>
                 <li>Filter to whitelisted collections.</li>
+              </ul>
+            </v-card-text>
+            <v-divider></v-divider>
+            <v-card-actions class="float-right">
+              Example:
+              <PfPView :fontColor="fontColor" :backgroundColor="backgroundColor"></PfPView>
+            </v-card-actions>
+          </v-card>
+        </v-col>
+      </v-row>
+      <v-row>
+        <v-col cols="4" class="d-flex align-stretch">
+          <v-card>
+            <v-card-title>No Code, Flow Queries</v-card-title>
+            <v-card-text>
+              <ul>
+                <li>Get a list of users NFTs</li>
+                <li>Build custom queries and display in your own website</li>
+                <li>No Code, Low Code options to create unique views and UI for your or other projects.</li>
               </ul>
             </v-card-text>
             <v-divider></v-divider>
