@@ -10,7 +10,7 @@
                   <p class="mb-1 pt-2 text-bold">DapZap is the Zapier for Web3</p>
                   <h5 class="font-weight-bolder">No Code, Low Code, and REST APIs to get to market fast.</h5>
                   <p class="mb-5">
-                    Add Prebuilt walletless and Flow/Dapper login Ui, PFP pickers and custom marketplace listings.
+                    Add Prebuilt walletless and Flow/Dapper login UI, PFP pickers and custom marketplace listings.
                     Level up your Web2 or Web3 projects in minutes.
                   </p>
                   <a

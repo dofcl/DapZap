@@ -179,6 +179,14 @@ export default {
       selectedRule: '',
       rules: [
         {
+          "name": "Minted",
+          "code": null
+        },
+        {
+          "name": "Listed",
+          "code": null
+        },
+        {
           "name": "Bought",
           "code": null
         },
@@ -214,7 +222,7 @@ export default {
           "code": 'discord',
         },
         {
-          "name": "Sent Tweet",
+          "name": "Send Tweet",
           "code": 'twitter',
         },
         {
