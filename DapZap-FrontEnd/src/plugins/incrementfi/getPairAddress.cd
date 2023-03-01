@@ -1,0 +1,5 @@
+/// SwapFactory.cdc
+
+pub fun getPairAddress(token0Key: String, token1Key: String): Address?
+pub fun getAllPairsLength(): Int
+pub fun getSlicedPairs(from: UInt64, to: UInt64): [Address]

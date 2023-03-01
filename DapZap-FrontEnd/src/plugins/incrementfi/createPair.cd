@@ -1,0 +1,7 @@
+/// SwapFactory.cdc
+
+pub fun createPair(
+token0Vault: @FungibleToken.Vault,
+token1Vault: @FungibleToken.Vault,
+accountCreationFee: @FungibleToken.Vault
+): Address

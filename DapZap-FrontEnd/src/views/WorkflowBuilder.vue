@@ -182,23 +182,23 @@ export default {
       rules: [
         {
           "name": "Minted",
-          "code": null
+          "code": "minted"
         },
         {
           "name": "Listed",
-          "code": null
+          "code": "listed"
         },
         {
           "name": "Bought",
-          "code": null
+          "code": "bought"
         },
         {
           "name": "Sold",
-          "code": null
+          "code": "sold"
         },
         {
           "name": "Traded",
-          "code": null
+          "code": "traded"
         },
         {
           "name": "Staked",
@@ -206,11 +206,11 @@ export default {
         },
         {
           "name": "Unstaked",
-          "code": null
+          "code": "unstaked"
         },
         {
           "name": "Burnt",
-          "code": null
+          "code": "burned"
         },
       ],
       selectedActions: '',
@@ -257,19 +257,20 @@ export default {
         },
       ],
       selectedProject: '',
-      projects: [{"name": "Flovatar", "code": null}, {"name": "Flowverse Socks", "code": null}, {
-        "name": "Flunks",
-        "code": null
-      }, {"name": "Niftory", "code": null}, {"name": "Puddle", "code": null}, {
-        "name": "FLOAT",
-        "code": null
-      }, {"name": "Flowverse Socks", "code": null}, {"name": "Hoodlums", "code": null}, {
-        "name": "TopShot",
-        "code": null
-      }, {"name": "UFC Strike", "code": null}, {"name": "La Liga Golazos", "code": null}], // todo move to db
+      projects: [ // todo https://github.com/dapperlabs/nft-catalog to pull this data
+        {"name": "Flovatar", "code": null}, {"name": "Flowverse Socks", "code": null}, {
+          "name": "Flunks",
+          "code": null
+        }, {"name": "Niftory", "code": null}, {"name": "Puddle", "code": null}, {
+          "name": "FLOAT",
+          "code": null
+        }, {"name": "Flowverse Socks", "code": null}, {"name": "Hoodlums", "code": null}, {
+          "name": "TopShot",
+          "code": null
+        }, {"name": "UFC Strike", "code": null}, {"name": "La Liga Golazos", "code": null}], // todo move to db
       tokens: ['FLOW', 'USDC', 'DUST', 'THUL'],
       ruleSource: '',
-      savedRule: {},
+      savedRule: this.addNodes,
       trigger: {
         toAddress: '',
         fromAddress: '',

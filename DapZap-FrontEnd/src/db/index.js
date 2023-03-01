@@ -2,9 +2,7 @@ import firebase from 'firebase/app'
 import 'firebase/firestore'
 import 'firebase/auth'
 import 'firebase/storage'
-// import axios from 'axios'
-// import * as fcl from '@onflow/fcl'
-// import * as t from '@onflow/types'
+import axios from 'axios'
 import db from './init'
 
 
@@ -106,4 +104,58 @@ export default {
                 console.log(error)
             })
     },
+
+    createDapZap(id, data) {
+        console.log('createDapZap')
+        if (id !== '') {
+            db.collection('DapZaps')
+                .doc(id)
+                .set(data)
+                .then(() => {
+                    console.log('DapZap successfully created!')
+                })
+                .catch(error => {
+                    console.error('Error writing profile: ', error)
+                })
+        }
+    },
+    async readDapZap(uuid) {
+        let dapZapData = {}
+        await db.collection('DapZaps')
+            .doc(uuid)
+            .get()
+            .then(doc => {
+                dapZapData = doc.data()
+            })
+            .catch(error => {
+                console.log('Error getting documents: ', error)
+            })
+
+        return dapZapData
+    },
+    async updateDapZap(uuid, fields) {
+        const dapZapData = fields
+        dapZapData.modified = firebase.firestore.FieldValue.serverTimestamp()
+        await db.collection('profiles')
+            .doc(uuid)
+            .update(dapZapData)
+            .then(data => data)
+            .catch(error => {
+                console.log(error)
+            })
+    },
+
+    // remember moste triggers are initiated via the serverless functions using firebase events, once the DapZap record is created
+    // https://firebase.google.com/docs/functions/firestore-events
+    triggerSeverlessFunction(functionName, Data) {
+        const url = `${process.env.VUE_APP_TASK_ENDPOINT}/${functionName}`
+        axios.post(url, Data)
+            .then(response => {
+                console.log(response)
+            })
+            .catch(error => {
+                console.log(error)
+            })
+    }
+
 }

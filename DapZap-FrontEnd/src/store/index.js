@@ -69,6 +69,7 @@ export default createStore({
             localStorage.removeItem('user')
             router.go('https://dapzap.com')
         },
+
         UPDATE_PROFILE(state, profile) {
             if (profile.file) {
                 const storage = firebase.storage().ref()
@@ -143,6 +144,17 @@ export default createStore({
                     .catch(error => {
                         console.log(error)
                     })
+            }
+        },
+        SAVE_RULE(state, dapzap) {
+            if (dapzap.new) {
+                dbFunctions.createDapZap(dapzap.id, {
+                    created: firebase.firestore.FieldValue.increment(1),
+                })
+            } else {
+                dbFunctions.updateDapZap(dapzap.id, {
+                    created: firebase.firestore.FieldValue.increment(1),
+                })
             }
         },
         toggleConfigurator(state) {

@@ -25,7 +25,7 @@
           </template>
         </sidenav-collapse>
       </li>
-      <li class="nav-item">
+      <li class="nav-item d-none">
         <sidenav-collapse navText="Flow Integrations" :to="{ name: 'Flow Integrations' }">
           <template #icon>
             <office/>

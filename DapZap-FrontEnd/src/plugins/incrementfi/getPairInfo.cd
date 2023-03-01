@@ -1,0 +1,4 @@
+/// SwapFactory.cdc
+
+pub fun getPairInfo(token0Key: String, token1Key: String): AnyStruct?
+pub fun getSlicedPairInfos(from: UInt64, to: UInt64): [AnyStruct]
