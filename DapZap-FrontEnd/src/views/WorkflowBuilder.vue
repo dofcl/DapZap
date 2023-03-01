@@ -101,7 +101,7 @@
                 <div class="card">
                   <div class="card-body">
                     <div class="btn-group center ">
-                      <button class="btn btn-success" type="button" @click="addRandomNode">Save</button>
+                      <button class="btn btn-success" type="button" @click="save">Save</button>
                       <button class="btn btn-primary" type="button" @click="addRandomNode">New DapZap</button>
                     </div>
                     <br>
@@ -172,6 +172,7 @@ export default {
   components: {},
   data() {
     return {
+      user: $store.state.user,
       dapzap: {
         name: "DapZap Name",
         description: "DapZap Description",
@@ -283,7 +284,7 @@ export default {
         channelId: '',
         listPrice: null,
         message: '',
-      }
+      },
     }
   },
   methods: {
@@ -291,6 +292,13 @@ export default {
       console.log(value)
       this.ruleSource = value
       this.selectedProject = ''
+    },
+    save() {
+      if (!this.user) {
+        this.router.push('/login')
+      } else {
+        this.$store.dispatch('saveRule', this.savedRule)
+      }
     }
   }
 };
