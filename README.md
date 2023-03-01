@@ -34,10 +34,11 @@ Theme using Vuetify 3 & Soft UI from https://www.creative-tim.com/product/vue-so
 https://cloud.google.com/firestore/docs/client/get-firebase
 
 ## Serverless functions on firebase (Extensions)
-For this POC we've used deployed several serverless function, these can be installed via the firebase UI:|https://extensions.dev/extensions
+For this POC we've used deployed several serverless function, these can be installed via the firebase UI: 
+https://extensions.dev/extensions
 - Emails: Trigger email
 - SMS: Send Messages with Twilio
-
+- Webhooks: Trigger webhooks
 ## Serverless functions on CloudFlare workers
 For this POC we've used prebuilt serverless several function repo have been cloned into DapZap-Functions
 Cloudflare serverless workers docs are here: https://developers.cloudflare.com/workers/learning/how-workers-works
@@ -49,9 +50,9 @@ JS embed into any website for no code functions
 Boiler plate
 from: https://itnext.io/vuidget-how-to-create-an-embeddable-vue-js-widget-with-vue-custom-element-674bdcb96b97
 
-## hosting
+## Hosting
 
-Hosted using Cloudlare push using wrangler
+Hosted using CloudFlare push using wrangler
 `wrangler login`
 
 ### Deploy
