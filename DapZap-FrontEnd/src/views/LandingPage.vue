@@ -7,10 +7,10 @@
             <div class="row">
               <div class="col-lg-6">
                 <div class="d-flex flex-column h-100">
-                  <h5 class="font-weight-bolder">Integrate Web Features into you app within minutes.</h5>
+                  <h5 class="font-weight-bolder">Integrate Web3 Features into you app within minutes.</h5>
                   <p class="mb-5">
-                    No Code, Low Code and Developer APISs make it easy to create, integrate end extend a wide range of
-                    web3 uses cases.
+                    No Code, Low Code and Developer APIs make it easy to create, integrate end extend a wide range of
+                    web3 uses cases. The Zapier for web3
                   </p>
                   <a
                       class="text-body text-sm font-weight-bold mb-0 icon-move-right mt-auto"
