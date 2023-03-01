@@ -101,8 +101,8 @@
                 <div class="card">
                   <div class="card-body">
                     <div class="btn-group center ">
-                      <button class="btn btn-success" type="button" @click="save">Save</button>
-                      <button class="btn btn-primary" type="button" @click="addRandomNode">New DapZap</button>
+                      <button class="btn btn-success" type="button" @click="save(false)">Save</button>
+                      <button class="btn btn-primary" type="button" @click="save(true)">New DapZap</button>
                     </div>
                     <br>
                     <div class="card-title">Action Setting:</div>
@@ -148,6 +148,7 @@ import {VueFlow, useVueFlow} from '@vue-flow/core'
 const {nodes, addNodes, addEdges, onConnect} = useVueFlow()
 
 onConnect((params) => addEdges([params]))
+import router from "@/router";
 
 const addRandomNode = (name) => {
   const nodeId = (nodes.value.length + 1).toString()
@@ -172,7 +173,7 @@ export default {
   components: {},
   data() {
     return {
-      user: $store.state.user,
+      user: this.$store.state.user,
       dapzap: {
         name: "DapZap Name",
         description: "DapZap Description",
@@ -293,11 +294,11 @@ export default {
       this.ruleSource = value
       this.selectedProject = ''
     },
-    save() {
-      if (!this.user) {
-        this.router.push('/login')
+    save(newRule) {
+      if (!this.user?.isLoggedin) {
+        router.push('/signin')
       } else {
-        this.$store.dispatch('saveRule', this.savedRule)
+        this.$store.dispatch('saveRule', this.savedRule, newRule)
       }
     }
   }
