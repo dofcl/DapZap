@@ -1,0 +1,37 @@
+{
+  "name": "@postlight/cloudflare-worker-app-kit",
+  "description": "Create a TypeScript app that is delivered with CloudFlare Workers",
+  "version": "1.1.0",
+  "author": "Postlight",
+  "bin": {
+    "cloudflare-worker-app-kit": "index.js"
+  },
+  "bugs": "https://github.com/postlight/cloudflare-worker-app-kit/issues",
+  "dependencies": {
+    "commander": "2.19.0",
+    "cross-spawn": "6.0.5",
+    "slugify": "1.3.4",
+    "url-pattern": "1.0.3"
+  },
+  "devDependencies": {
+    "prettier": "1.16.4"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "homepage": "https://github.com/postlight/cloudflare-worker-app-kit",
+  "keywords": [
+    "cloudflare",
+    "workers",
+    "starter kit",
+    "cli",
+    "typescript",
+    "server-side rendering"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": "postlight/cloudflare-worker-app-kit",
+  "scripts": {
+    "test": "echo NO TESTS"
+  }
+}
