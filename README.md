@@ -33,12 +33,12 @@ Theme using Vuetify 3 & Soft UI from https://www.creative-tim.com/product/vue-so
 ## Firebase for DB (firestore)
 https://cloud.google.com/firestore/docs/client/get-firebase
 
-## Serverless functions on firebase
+## Serverless functions on firebase (Extensions)
 For this POC we've used deployed several serverless function, these can be installed via the firebase UI:|https://extensions.dev/extensions
 - Emails: Trigger email
 - SMS: Send Messages with Twilio
 
-## Serverless functions on CloudlFlare workers
+## Serverless functions on CloudFlare workers
 For this POC we've used prebuilt serverless several function repo have been cloned into DapZap-Functions
 Cloudflare serverless workers docs are here: https://developers.cloudflare.com/workers/learning/how-workers-works
 
