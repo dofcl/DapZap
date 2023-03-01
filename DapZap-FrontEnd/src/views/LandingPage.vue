@@ -63,8 +63,8 @@
         </div>
       </div>
     </div>
-    <h4 class="mt-4 ml-2">Use Cases:</h4>
-    <div class="row mt-4">
+    <h4 class="mt-4 ml-2 d-none">Use Cases:</h4>
+    <div class="row mt-4 d-none">
       <div class="col-lg-7 mb-lg-0 mb-4 d-flex align-stretch">
         <div class="card d-flex align-stretch">
           <div class="card-body p-3">
