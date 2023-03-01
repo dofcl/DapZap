@@ -32,6 +32,9 @@ Theme using Vuetify 3 & Soft UI from https://www.creative-tim.com/product/vue-so
 # BackendEnd
 ## Firebase for DB (firestore)
 https://cloud.google.com/firestore/docs/client/get-firebase
+For the most part Firebase Triggers are used to initiate serverless functions:
+https://firebase.google.com/docs/functions/firestore-events
+Tasks are sent when DapZaps are Added or Edited to firebase. 
 
 ## Serverless functions on firebase (Extensions)
 For this POC we've used deployed several serverless function, these can be installed via the firebase UI: 

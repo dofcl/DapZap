@@ -109,6 +109,7 @@ const READY_WALLET = gql`
   }
 `;
 
+// eslint-disable-next-line no-unused-vars
 const apolloClient = new ApolloClient({
   uri: 'https://graphql.api.staging.niftory.com' //mainet https://graphql.api.niftory.com
 })

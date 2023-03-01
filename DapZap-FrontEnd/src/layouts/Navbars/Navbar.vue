@@ -130,19 +130,5 @@ export default {
       return this.$route.name;
     },
   },
-  updated() {
-    const navbar = document.getElementById("navbarBlur");
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > 10 && this.$store.state.isNavFixed) {
-        navbar.classList.add("blur");
-        navbar.classList.add("position-sticky");
-        navbar.classList.add("shadow-blur");
-      } else {
-        navbar.classList.remove("blur");
-        navbar.classList.remove("position-sticky");
-        navbar.classList.remove("shadow-blur");
-      }
-    });
-  },
 };
 </script>
