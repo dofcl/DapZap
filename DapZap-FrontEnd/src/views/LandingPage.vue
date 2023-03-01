@@ -9,7 +9,7 @@
                 <div class="d-flex flex-column h-100">
                   <h5 class="font-weight-bolder">Integrate Web3 Features into you app within minutes.</h5>
                   <p class="mb-5">
-                    No Code, Low Code and Developer APISs make it easy to create, integrate end extend a wide range of
+                    No Code, Low Code and Developer APIs make it easy to create, integrate end extend a wide range of
                     web3 uses cases.
                   </p>
                   <a
